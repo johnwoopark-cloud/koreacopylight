@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>드라마 법률 뉴스 모니터링</title>
+    <style>
+        :root { --primary-color: #2c3e50; --accent-color: #3498db; }
+        body { font-family: 'Pretendard', sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #f8f9fa; }
+        h1 { border-left: 5px solid var(--primary-color); padding-left: 15px; color: var(--primary-color); }
+        .container { display: flex; flex-direction: column; gap: 30px; }
+        
+        /* 뉴스 리스트 스타일 */
+        .news-item { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); display: flex; gap: 15px; align-items: flex-start; margin-bottom: 15px; transition: 0.2s; }
+        .news-item:hover { transform: translateY(-3px); box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .checkbox-container { padding-top: 5px; }
+        .news-content { flex: 1; }
+        .news-title { font-weight: bold; font-size: 1.1em; margin-bottom: 8px; display: block; text-decoration: none; color: #222; }
+        .news-title:hover { color: var(--accent-color); }
+        .news-desc { font-size: 0.95em; color: #666; margin-bottom: 10px; }
+        .news-meta { font-size: 0.85em; color: #999; }
+
+        /* 저장 버튼 스타일 */
+        #save-btn { position: fixed; bottom: 30px; right: 30px; padding: 15px 30px; background: #e74c3c; color: white; border: none; border-radius: 50px; font-weight: bold; cursor: pointer; display: none; box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4); z-index: 100; }
+        
+        /* 내 리스트 스타일 */
+        #my-list-section { background: #ecf0f1; padding: 25px; border-radius: 12px; margin-top: 40px; border: 2px dashed #bdc3c7; }
+        .saved-item { background: #fff; padding: 10px 15px; margin-bottom: 8px; border-radius: 5px; display: flex; justify-content: space-between; font-size: 0.9em; }
+        .empty-msg { color: #95a5a6; text-align: center; }
+    </style>
+</head>
+<body>
+
+<h1>📺 드라마 소송/판결 실시간 리스트</h1>
+<p id="update-time" style="font-size: 0.8em; color: #666;"></p>
+
+<div class="container">
+    <div id="news-list">데이터를 불러오는 중...</div>
+
+    <button id="save-btn" onclick="saveToMyList()">📌 선택한 기사 저장하기</button>
+
+    <div id="my-list-section">
+        <h3>내 저장 리스트</h3>
+        <div id="saved-items-container">
+            <p class="empty-msg">체크박스를 선택하고 저장 버튼을 눌러보세요.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    let newsData = [];
+
+    // 1. JSON 데이터 가져오기
+    fetch('news_data.json')
+        .then(response => response.json())
+        .then(data => {
+            newsData = data;
+            displayNews(data);
+            document.getElementById('update-time').innerText = `마지막 업데이트: ${new Date().toLocaleString()}`;
+        })
+        .catch(err => {
+            document.getElementById('news-list').innerText = '데이터를 불러올 수 없습니다. (아직 수집된 데이터가 없을 수 있습니다)';
+        });
+
+    // 2. 뉴스 리스트 화면에 그리기
+    function displayNews(items) {
+        const container = document.getElementById('news-list');
+        container.innerHTML = '';
+
+        items.forEach((item, index) => {
+            const div = document.createElement('div');
+            div.className = 'news-item';
+            div.innerHTML = `
+                <div class="checkbox-container">
+                    <input type="checkbox" class="news-check" data-index="${index}" onchange="toggleSaveBtn()">
+                </div>
+                <div class="news-content">
+                    <a href="${item.link}" target="_blank" class="news-title">${item.title}</a>
+                    <div class="news-desc">${item.description}...</div>
+                    <div class="news-meta">날짜: ${item.pubDate} | <a href="${item.originallink}" target="_blank" style="color:#999">원문 보기</a></div>
+                </div>
+            `;
+            container.appendChild(div);
+        });
+    }
+
+    // 3. 체크박스 선택 시 저장 버튼 노출
+    function toggleSaveBtn() {
+        const checkedCount = document.querySelectorAll('.news-check:checked').length;
+        document.getElementById('save-btn').style.display = checkedCount > 0 ? 'block' : 'none';
+    }
+
+    // 4. 선택한 기사 내 리스트에 저장 (브라우저 메모리 사용)
+    function saveToMyList() {
+        const checkedBoxes = document.querySelectorAll('.news-check:checked');
+        const savedContainer = document.getElementById('saved-items-container');
+        
+        if (checkedBoxes.length > 0) {
+            savedContainer.innerHTML = ''; // 안내 문구 삭제
+        }
+
+        checkedBoxes.forEach(box => {
+            const index = box.dataset.index;
+            const item = newsData[index];
+            
+            const savedDiv = document.createElement('div');
+            savedDiv.className = 'saved-item';
+            savedDiv.innerHTML = `
+                <span><strong>[${item.pubDate}]</strong> ${item.title}</span>
+                <span style="color:#3498db; font-size:0.8em;">저장됨</span>
+            `;
+            savedContainer.appendChild(savedDiv);
+            
+            box.checked = false; // 저장 후 체크 해제
+        });
+        
+        toggleSaveBtn();
+        alert('내 리스트에 저장되었습니다!');
+    }
+</script>
+
+</body>
+</html>
