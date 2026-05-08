@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>드라마 법률 뉴스 모니터링</title>
+    <title>법률 저작권 뉴스 모니터링</title>
     <style>
         :root { --primary-color: #2c3e50; --accent-color: #3498db; }
         body { font-family: 'Pretendard', sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #f8f9fa; }
@@ -29,7 +29,7 @@
 </head>
 <body>
 
-<h1>📺 드라마 소송/판결 실시간 리스트</h1>
+<h1>📺 법률, 저작권, 소송, 판결, 분쟁 실시간 리스트</h1>
 <p id="update-time" style="font-size: 0.8em; color: #666;"></p>
 
 <div class="container">
@@ -93,7 +93,7 @@
         document.getElementById('save-btn').style.display = checkedCount > 0 ? 'block' : 'none';
     }
 
-    // [핵심] 내 리스트에 저장 및 로컬 스토리지 기록
+    // 내 리스트에 저장 및 로컬 스토리지 기록
     function saveToMyList() {
         const checkedBoxes = document.querySelectorAll('.news-check:checked');
         let currentSaved = JSON.parse(localStorage.getItem('myNewsList')) || [];
