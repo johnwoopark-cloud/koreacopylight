@@ -5,7 +5,7 @@ from datetime import datetime
 from difflib import SequenceMatcher
 
 # 1. 검색 키워드 설정
-KEYWORDS = ["저작권", "저작권 소송", "저작권 분쟁", "저작권 판결", "저작권 단속"]
+KEYWORDS = ["저작권", "저작권 소송", "저작권 분쟁", "저작권 판결", "저작권 단속", "저작권 침해"]
 
 # 2. 네이버 API 정보
 CLIENT_ID = os.environ.get('NAVER_CLIENT_ID')
