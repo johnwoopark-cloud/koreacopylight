@@ -4,7 +4,7 @@ import json
 from datetime import datetime
 
 # 1. 검색 키워드 설정 (나중에 여기서 자유롭게 추가/삭제)
-KEYWORDS = ["드라마 소송", "드라마 판결", "드라마 표절", "드라마 저작권", "저작권", "저작권 소송","저작권 분쟁", "저작권 판결", "저작권 단속"]
+KEYWORDS = ["저작권", "저작권 소송","저작권 분쟁", "저작권 판결", "저작권 단속"]
 
 # 2. 네이버 API 정보 (GitHub Secrets)
 CLIENT_ID = os.environ.get('NAVER_CLIENT_ID')
