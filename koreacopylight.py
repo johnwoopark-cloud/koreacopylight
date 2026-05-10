@@ -2,13 +2,18 @@ import os
 import requests
 import json
 from datetime import datetime
+from difflib import SequenceMatcher # 유사도 분석을 위한 라이브러리
 
-# 1. 검색 키워드 설정 (나중에 여기서 자유롭게 추가/삭제)
-KEYWORDS = ["저작권", "저작권 소송","저작권 분쟁", "저작권 판결", "저작권 단속"]
+# 1. 검색 키워드 설정
+KEYWORDS = ["저작권", "저작권 소송", "저작권 분쟁", "저작권 판결", "저작권 단속"]
 
-# 2. 네이버 API 정보 (GitHub Secrets)
+# 2. 네이버 API 정보
 CLIENT_ID = os.environ.get('NAVER_CLIENT_ID')
 CLIENT_SECRET = os.environ.get('NAVER_CLIENT_SECRET')
+
+def is_similar(str1, str2):
+    """두 문장의 유사도를 0~1 사이로 반환 (0.6 이상이면 유사하다고 판단)"""
+    return SequenceMatcher(None, str1, str2).ratio()
 
 def fetch_naver_news(keyword):
     url = "https://openapi.naver.com/v1/search/news.json"
@@ -18,44 +23,55 @@ def fetch_naver_news(keyword):
     }
     params = {
         "query": keyword,
-        "display": 10, # 키워드당 10개씩 가져옴
-        "sort": "sim"  # 유사도순 (최신순은 'date')
+        "display": 20, # 더 많은 후보를 가져와서 그룹화
+        "sort": "sim"
     }
     
     response = requests.get(url, headers=headers, params=params)
     if response.status_code == 200:
         return response.json().get('items', [])
-    else:
-        print(f"Error: {response.status_code}")
-        return []
+    return []
 
 def main():
-    all_news = []
-    seen_links = set() # 중복 기사 제거용
+    raw_news = []
+    seen_links = set()
 
+    # 데이터 수집
     for kw in KEYWORDS:
-        news_items = fetch_naver_news(kw)
-        for item in news_items:
-            # 중복 체크 (링크 기준)
+        items = fetch_naver_news(kw)
+        for item in items:
             if item['link'] not in seen_links:
-                # HTML 태그 제거 및 데이터 정리
-                clean_title = item['title'].replace('<b>', '').replace('</b>', '').replace('&quot;', '"')
-                clean_desc = item['description'].replace('<b>', '').replace('</b>', '').replace('&quot;', '"')
+                clean_title = item['title'].replace('<b>', '').replace('</b>', '').replace('&quot;', '"').replace('&apos;', "'")
+                clean_desc = item['description'].replace('<b>', '').replace('</b>', '').replace('&quot;', '"').replace('&apos;', "'")
                 
-                all_news.append({
+                raw_news.append({
                     "title": clean_title,
-                    "description": clean_desc[:200], # 200자 내외 제한
+                    "description": clean_desc[:200],
                     "link": item['link'],
                     "pubDate": item['pubDate'],
-                    "originallink": item['originallink'] # 매체사 확인용
+                    "similar_count": 0 # 유사 기사 개수 초기화
                 })
                 seen_links.add(item['link'])
 
-    # 결과를 JSON 파일로 저장
+    # 유사 기사 그룹화 로직
+    final_news = []
+    for item in raw_news:
+        is_grouped = False
+        for existing in final_news:
+            # 제목 유사도가 0.6(60%) 이상이면 유사 기사로 판단
+            if is_similar(item['title'], existing['title']) > 0.6:
+                existing['similar_count'] += 1
+                is_grouped = True
+                break
+        
+        if not is_grouped:
+            final_news.append(item)
+
+    # 결과 저장
     with open('news_data.json', 'w', encoding='utf-8') as f:
-        json.dump(all_news, f, ensure_ascii=False, indent=4)
+        json.dump(final_news, f, ensure_ascii=False, indent=4)
     
-    print(f"총 {len(all_news)}건의 뉴스 수집 완료.")
+    print(f"총 {len(final_news)}건의 대표 뉴스 정리 완료.")
 
 if __name__ == "__main__":
     main()
