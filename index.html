@@ -6,34 +6,33 @@
     <title>법률 저작권 뉴스 모니터링</title>
     <style>
         :root {
-            --bg-color: #f4f6f8;
+            --bg-color: #f8f9fa;
             --card-bg: #ffffff;
-            --header-bg: #34495e; /* 제목 영역 색상 */
-            --text-main: #2c3e50;
-            --text-sub: #586069;
-            --accent: #d35400; /* 저장 아이콘 강조색 */
+            --header-bg: #2c3e50; 
+            --text-main: #333;
+            --text-sub: #666;
+            --accent: #e74c3c;
         }
 
         body {
-            font-family: 'Pretendard', -apple-system, sans-serif;
+            font-family: 'Pretendard', sans-serif;
             background-color: var(--bg-color);
             margin: 0;
             padding: 40px 20px;
-            color: var(--text-main);
         }
 
         h1 {
             text-align: center;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             margin-bottom: 40px;
-            letter-spacing: -0.5px;
+            color: #222;
         }
 
         .news-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 20px;
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
@@ -41,49 +40,48 @@
             background: var(--card-bg);
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
             transition: transform 0.2s ease;
             display: flex;
             flex-direction: column;
-            border: 1px solid #e1e4e8;
+            border: 1px solid #eee;
         }
 
         .news-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-4px);
         }
 
-        /* 텍스트 헤더 (이미지 없음) */
+        /* 제목 영역 */
         .card-header-text {
             background: var(--header-bg);
-            padding: 24px 20px;
-            min-height: 80px;
+            padding: 22px 20px;
+            min-height: 70px;
             display: flex;
             align-items: center;
             position: relative;
         }
 
         .header-title-link {
-            color: #ffffff;
+            color: #fff;
             text-decoration: none;
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             font-weight: 700;
             line-height: 1.4;
-            padding-right: 30px;
+            padding-right: 35px;
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
             overflow: hidden;
         }
 
-        /* 저장 버튼 */
         .bookmark-btn {
             position: absolute;
             top: 15px;
             right: 15px;
-            background: rgba(255,255,255,0.15);
+            background: rgba(255,255,255,0.2);
             border: none;
-            width: 32px;
-            height: 32px;
+            width: 30px;
+            height: 30px;
             border-radius: 50%;
             cursor: pointer;
             display: flex;
@@ -92,17 +90,13 @@
             color: white;
         }
 
-        .bookmark-btn:hover {
-            background: var(--accent);
-        }
-
         .card-body {
-            padding: 20px;
+            padding: 18px 20px;
             flex-grow: 1;
         }
 
         .news-desc {
-            font-size: 0.95rem;
+            font-size: 0.92rem;
             color: var(--text-sub);
             line-height: 1.6;
             margin: 0;
@@ -112,59 +106,66 @@
             overflow: hidden;
         }
 
-        /* 하단 정보 (언론사 명칭 강조) */
+        /* 하단 푸터: 날짜만 표시 */
         .news-footer {
-            padding: 15px 20px;
-            background: #f9f9f9;
-            border-top: 1px solid #eee;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            padding: 12px 20px;
+            background: #fdfdfd;
+            border-top: 1px solid #f1f1f1;
+            text-align: right;
             font-size: 0.8rem;
-        }
-
-        .source-name {
-            font-weight: 800;
-            color: #2980b9; /* 언론사 명칭 색상 */
-            text-transform: uppercase;
-        }
-
-        .pub-date {
-            color: #95a5a6;
+            color: #aaa;
         }
 
         #my-list-section {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 60px auto;
             background: #fff;
-            padding: 20px;
+            padding: 25px;
             border-radius: 12px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
         }
 
         .saved-item {
             display: flex;
             justify-content: space-between;
-            padding: 10px;
-            border-bottom: 1px solid #f1f1f1;
+            padding: 12px;
+            border-bottom: 1px solid #f7f7f7;
         }
 
-        @media (max-width: 768px) {
+        .saved-link {
+            text-decoration: none;
+            color: #444;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            flex: 1;
+        }
+
+        .del-btn {
+            background: #f1f1f1;
+            border: none;
+            padding: 4px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.75rem;
+            margin-left: 10px;
+            color: #888;
+        }
+
+        @media (max-width: 600px) {
             .news-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
-<h1>⚖️ 실시간 법률 저작권 뉴스</h1>
+<h1>⚖️ 법률 저작권 뉴스 리스트</h1>
 
-<div class="news-grid" id="news-list">
-    </div>
+<div class="news-grid" id="news-list"></div>
 
 <div id="my-list-section">
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
-        <h3 style="margin:0;">📌 저장된 기사 리스트</h3>
-        <button onclick="clearAll()" style="background:none; border:none; color:#bbb; cursor:pointer; font-size:0.8rem;">모두 삭제</button>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h3 style="margin:0;">📌 나중에 읽을 뉴스</h3>
+        <button onclick="clearAll()" style="background:none; border:none; color:#bbb; cursor:pointer; font-size:0.8rem;">모두 비우기</button>
     </div>
     <div id="saved-items-container"></div>
 </div>
@@ -199,7 +200,7 @@
                 displayNews(data);
             })
             .catch(err => {
-                document.getElementById('news-list').innerHTML = '<p style="text-align:center; grid-column: 1/-1;">데이터를 불러오는 중 오류가 발생했습니다.</p>';
+                document.getElementById('news-list').innerHTML = '<p style="grid-column: 1/-1; text-align:center;">데이터를 불러올 수 없습니다.</p>';
             });
     }
 
@@ -208,19 +209,15 @@
         container.innerHTML = '';
 
         items.forEach((item, index) => {
-            // 언론사 명칭 (source 필드가 없을 경우를 대비해 '알 수 없음' 처리)
-            const pressName = item.source || item.press || '언론사 정보 없음';
-            const formattedDate = formatKoreanDate(item.pubDate);
-
             const card = document.createElement('div');
             card.className = 'news-card';
             
             card.innerHTML = `
                 <div class="card-header-text">
                     <a href="${item.link}" target="_blank" class="header-title-link">${item.title}</a>
-                    <button class="bookmark-btn" onclick="saveToMyList(${index})" title="저장">
-                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/>
+                    <button class="bookmark-btn" onclick="saveToMyList(${index})">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M2 2v13.5l5.223-2.815 5.223 2.815V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/>
                         </svg>
                     </button>
                 </div>
@@ -228,8 +225,7 @@
                     <p class="news-desc">${item.description}</p>
                 </div>
                 <div class="news-footer">
-                    <span class="source-name">${pressName}</span>
-                    <span class="pub-date">${formattedDate}</span>
+                    <span>${formatKoreanDate(item.pubDate)}</span>
                 </div>
             `;
             container.appendChild(card);
@@ -244,14 +240,13 @@
             currentSaved.push({
                 title: item.title,
                 link: item.link,
-                press: item.source || item.press || '언론사 정보 없음',
                 date: formatKoreanDate(item.pubDate)
             });
             localStorage.setItem('myNewsList', JSON.stringify(currentSaved));
             loadSavedList();
-            alert('내 리스트에 저장되었습니다.');
+            alert('저장되었습니다.');
         } else {
-            alert('이미 저장된 기사입니다.');
+            alert('이미 저장된 뉴스입니다.');
         }
     }
 
@@ -260,16 +255,16 @@
         const currentSaved = JSON.parse(localStorage.getItem('myNewsList')) || [];
 
         if (currentSaved.length === 0) {
-            savedContainer.innerHTML = '<p style="color:#bbb; text-align:center; font-size:0.9rem; padding:20px;">저장된 내용이 없습니다.</p>';
+            savedContainer.innerHTML = '<p style="color:#ccc; text-align:center; padding:20px;">저장된 뉴스가 없습니다.</p>';
             return;
         }
 
         savedContainer.innerHTML = currentSaved.map((item, idx) => `
             <div class="saved-item">
-                <a href="${item.link}" target="_blank" style="text-decoration:none; color:#333; font-size:0.85rem; flex:1;">
-                    <span style="color:#2980b9; font-weight:bold;">[${item.press}]</span> ${item.title}
+                <a href="${item.link}" target="_blank" class="saved-link">
+                    <strong>[${item.date}]</strong> ${item.title}
                 </a>
-                <button onclick="deleteItem(${idx})" style="background:#f1f1f1; border:none; padding:3px 8px; border-radius:4px; cursor:pointer; font-size:0.7rem; margin-left:10px;">삭제</button>
+                <button class="del-btn" onclick="deleteItem(${idx})">삭제</button>
             </div>
         `).join('');
     }
@@ -282,7 +277,7 @@
     }
 
     function clearAll() {
-        if(confirm('모든 리스트를 비울까요?')) {
+        if(confirm('리스트를 모두 비우시겠습니까?')) {
             localStorage.removeItem('myNewsList');
             loadSavedList();
         }
