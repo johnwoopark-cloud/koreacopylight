@@ -6,17 +6,16 @@
     <title>법률 저작권 뉴스 모니터링</title>
     <style>
         :root {
-            --bg-color: #f4f7f6;
+            --bg-color: #f0f2f5;
             --card-bg: #ffffff;
-            --tag-blue: #3e4b75;
-            --tag-purple: #4a3e75;
-            --text-main: #333333;
-            --text-sub: #666666;
-            --accent: #f39c12; /* 북마크 강조색 */
+            --header-bg: #2c3e50; /* 제목 영역 배경색 */
+            --text-main: #1c1e21;
+            --text-sub: #606770;
+            --accent: #e67e22;
         }
 
         body {
-            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            font-family: 'Pretendard', -apple-system, sans-serif;
             background-color: var(--bg-color);
             margin: 0;
             padding: 40px 20px;
@@ -26,151 +25,130 @@
         h1 {
             text-align: center;
             font-size: 1.8rem;
-            margin-bottom: 30px;
-            color: #222;
+            margin-bottom: 40px;
+            color: #1a1a1a;
         }
 
         /* 그리드 컨테이너 */
         .news-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
             gap: 25px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
-        /* 카드 개별 스타일 */
+        /* 카드 디자인: 이미지를 대체하는 텍스트 헤더 */
         .news-card {
             background: var(--card-bg);
-            border-radius: 15px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: transform 0.2s;
-            position: relative;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: all 0.2s ease;
             display: flex;
             flex-direction: column;
-            border: 1px solid #eee;
+            border: 1px solid #e1e4e8;
         }
 
         .news-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
         }
 
-        /* 카드 상단 이미지 영역 (이미지 없을 시 대비용 높이) */
-        .card-header {
-            width: 100%;
-            height: 180px;
-            background: #e0e0e0;
-            position: relative;
-            background-size: cover;
-            background-position: center;
-        }
-
-        /* 이미지 위 태그 */
-        .category-tag {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            background: rgba(44, 62, 80, 0.8);
-            color: white;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 600;
-        }
-
-        /* 북마크 아이콘 스타일 */
-        .bookmark-icon {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            width: 28px;
-            height: 28px;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 50%;
+        /* 사진 대신 제목이 들어가는 영역 */
+        .card-header-text {
+            background: var(--header-bg);
+            padding: 25px 20px;
+            min-height: 100px;
             display: flex;
             align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: relative;
         }
 
-        .bookmark-icon.active {
-            background: var(--accent);
-            color: white;
-        }
-
-        /* 카드 텍스트 내용 */
-        .card-body {
-            padding: 20px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .news-title {
-            font-size: 1.15rem;
+        .header-title-link {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.25rem;
             font-weight: 700;
             line-height: 1.4;
-            margin-bottom: 12px;
-            color: #111;
-            text-decoration: none;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-
-        .news-title:hover {
-            color: #0056b3;
-        }
-
-        .news-desc {
-            font-size: 0.9rem;
-            color: var(--text-sub);
-            line-height: 1.6;
-            margin-bottom: 15px;
             display: -webkit-box;
             -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
             overflow: hidden;
         }
 
-        .news-footer {
-            margin-top: auto;
+        /* 저장 버튼 (북마크 아이콘) */
+        .bookmark-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(255,255,255,0.2);
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: center;
+            color: white;
+            transition: background 0.2s;
+        }
+
+        .bookmark-btn:hover {
+            background: var(--accent);
+        }
+
+        /* 카드 본문 (설명글) */
+        .card-body {
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .news-desc {
+            font-size: 0.95rem;
+            color: var(--text-sub);
+            line-height: 1.6;
+            margin: 0;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* 푸터: 날짜 및 출처 */
+        .news-footer {
+            padding: 15px 20px;
+            background: #fafafa;
+            border-top: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
             font-size: 0.8rem;
-            color: #bbb;
-            padding-top: 15px;
-            border-top: 1px solid #f0f0f0;
+            color: #888;
+        }
+
+        .source-name {
+            font-weight: bold;
+            color: #444;
         }
 
         /* 저장된 리스트 섹션 */
         #my-list-section {
             max-width: 1200px;
-            margin: 50px auto;
+            margin: 60px auto;
             background: #fff;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #ddd;
         }
 
         .saved-item {
             display: flex;
             justify-content: space-between;
-            padding: 12px 0;
-            border-bottom: 1px solid #eee;
-        }
-
-        .delete-btn {
-            background: #ff7675;
-            color: white;
-            border: none;
-            padding: 4px 10px;
-            border-radius: 5px;
-            cursor: pointer;
+            align-items: center;
+            padding: 12px;
+            border-bottom: 1px solid #f0f0f0;
         }
 
         /* 반응형 */
@@ -181,21 +159,20 @@
 </head>
 <body>
 
-<h1>📺 법률 및 저작권 뉴스 모니터링</h1>
+<h1>⚖️ 법률 저작권 뉴스 모니터링</h1>
 
 <div class="news-grid" id="news-list">
     </div>
 
 <div id="my-list-section">
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-        <h3>📌 내 저장 리스트</h3>
-        <button onclick="clearAll()" style="border:none; background:none; color:#999; cursor:pointer;">전체 삭제</button>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+        <h3 style="margin:0;">📌 나중에 읽을 뉴스</h3>
+        <button onclick="clearAll()" style="background:none; border:none; color:#999; cursor:pointer; font-size:0.8rem;">전체 비우기</button>
     </div>
     <div id="saved-items-container"></div>
 </div>
 
 <script>
-    // 기존 데이터 로드 로직 유지하되, displayNews 부분만 카드형으로 수정
     let newsData = [];
 
     window.onload = function() {
@@ -203,8 +180,21 @@
         loadSavedList();
     };
 
+    // 날짜 포맷팅 함수 (2026년 5월 12일 00시 00분 형식)
+    function formatKoreanDate(dateStr) {
+        const date = new Date(dateStr);
+        if (isNaN(date)) return dateStr; // 유효하지 않은 날짜면 원본 반환
+
+        const year = date.getFullYear();
+        const month = date.getMonth() + 1;
+        const day = date.getDate();
+        const hours = String(date.getHours()).padStart(2, '0');
+        const minutes = String(date.getMinutes()).padStart(2, '0');
+
+        return `${year}년 ${month}월 ${day}일 ${hours}시 ${minutes}분`;
+    }
+
     function loadNews() {
-        // 실제 운영 시에는 news_data.json 경로 확인 필요
         fetch('news_data.json?v=' + new Date().getTime())
             .then(response => response.json())
             .then(data => {
@@ -212,7 +202,7 @@
                 displayNews(data);
             })
             .catch(err => {
-                document.getElementById('news-list').innerHTML = '<p>데이터를 불러올 수 없습니다. JSON 파일을 확인하세요.</p>';
+                document.getElementById('news-list').innerHTML = '<p style="text-align:center; grid-column: 1/-1;">뉴스를 불러올 수 없습니다. JSON 파일을 확인해 주세요.</p>';
             });
     }
 
@@ -221,36 +211,31 @@
         container.innerHTML = '';
 
         items.forEach((item, index) => {
+            const formattedDate = formatKoreanDate(item.pubDate);
             const card = document.createElement('div');
             card.className = 'news-card';
             
-            // 이미지 경로가 없을 경우를 위한 기본 배경색 처리
-            const bgImg = item.image ? `style="background-image: url('${item.image}')"` : '';
-            const category = item.category || "글로벌 동향";
-
             card.innerHTML = `
-                <div class="card-header" ${bgImg}>
-                    <span class="category-tag">${category}</span>
-                    <div class="bookmark-icon" onclick="saveToMyList(${index})">
-                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2z"/>
+                <div class="card-header-text">
+                    <a href="${item.link}" target="_blank" class="header-title-link">${item.title}</a>
+                    <button class="bookmark-btn" onclick="saveToMyList(${index})" title="저장하기">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/>
                         </svg>
-                    </div>
+                    </button>
                 </div>
                 <div class="card-body">
-                    <a href="${item.link}" target="_blank" class="news-title">${item.title}</a>
-                    <div class="news-desc">${item.description}</div>
-                    <div class="news-footer">
-                        <span>${item.source || 'Insight Korea'}</span>
-                        <span>${item.pubDate}</span>
-                    </div>
+                    <p class="news-desc">${item.description}</p>
+                </div>
+                <div class="news-footer">
+                    <span class="source-name">${item.source || '뉴스 출처'}</span>
+                    <span>${formattedDate}</span>
                 </div>
             `;
             container.appendChild(card);
         });
     }
 
-    // 저장 로직 (인덱스 직접 받도록 수정)
     function saveToMyList(index) {
         const item = newsData[index];
         let currentSaved = JSON.parse(localStorage.getItem('myNewsList')) || [];
@@ -259,11 +244,11 @@
             currentSaved.push({
                 title: item.title,
                 link: item.link,
-                date: item.pubDate
+                date: formatKoreanDate(item.pubDate)
             });
             localStorage.setItem('myNewsList', JSON.stringify(currentSaved));
             loadSavedList();
-            alert('저장되었습니다!');
+            alert('리스트에 저장되었습니다.');
         } else {
             alert('이미 저장된 기사입니다.');
         }
@@ -274,16 +259,16 @@
         const currentSaved = JSON.parse(localStorage.getItem('myNewsList')) || [];
 
         if (currentSaved.length === 0) {
-            savedContainer.innerHTML = '<p style="color:#999; text-align:center;">저장된 기사가 없습니다.</p>';
+            savedContainer.innerHTML = '<p style="color:#bbb; text-align:center; font-size:0.9rem; padding:20px;">저장된 기사가 없습니다.</p>';
             return;
         }
 
         savedContainer.innerHTML = currentSaved.map((item, idx) => `
             <div class="saved-item">
-                <a href="${item.link}" target="_blank" style="text-decoration:none; color:#333; font-size:0.9rem;">
+                <a href="${item.link}" target="_blank" style="text-decoration:none; color:#333; font-size:0.9rem; flex:1; margin-right:10px;">
                     <strong>[${item.date}]</strong> ${item.title}
                 </a>
-                <button class="delete-btn" onclick="deleteItem(${idx})">삭제</button>
+                <button onclick="deleteItem(${idx})" style="background:#eee; border:none; padding:5px 8px; border-radius:4px; cursor:pointer; font-size:0.75rem;">삭제</button>
             </div>
         `).join('');
     }
@@ -296,7 +281,7 @@
     }
 
     function clearAll() {
-        if(confirm('전체 삭제하시겠습니까?')) {
+        if(confirm('리스트를 모두 삭제할까요?')) {
             localStorage.removeItem('myNewsList');
             loadSavedList();
         }
