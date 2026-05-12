@@ -2,174 +2,82 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>법률 저작권 뉴스 모니터링</title>
+    <title>Copyright News Trends</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        :root { --primary-color: #2c3e50; --accent-color: #3498db; }
-        body { font-family: 'Pretendard', sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #f8f9fa; }
-        h1 { border-left: 5px solid var(--primary-color); padding-left: 15px; color: var(--primary-color); }
-        .container { display: flex; flex-direction: column; gap: 30px; }
-        
-        .news-item { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); display: flex; gap: 15px; align-items: flex-start; margin-bottom: 15px; }
-        .checkbox-container { padding-top: 5px; }
-        .news-content { flex: 1; }
-        .news-title { font-weight: bold; font-size: 1.1em; margin-bottom: 8px; display: block; text-decoration: none; color: #222; }
-        .news-title:hover { color: var(--accent-color); }
-        .news-desc { font-size: 0.95em; color: #666; margin-bottom: 10px; }
-        .news-meta { font-size: 0.85em; color: #999; }
-
-        /* 유사 기사 표시 스타일 */
-        .similar-news { font-size: 0.85em; color: #e67e22; font-weight: 500; margin-top: 8px; padding-top: 5px; border-top: 1px dashed #eee; }
-
-        #save-btn { position: fixed; bottom: 30px; right: 30px; padding: 15px 30px; background: #e74c3c; color: white; border: none; border-radius: 50px; font-weight: bold; cursor: pointer; display: none; box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4); z-index: 100; }
-        
-        #my-list-section { background: #ecf0f1; padding: 25px; border-radius: 12px; margin-top: 40px; border: 2px dashed #bdc3c7; }
-        .list-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
-        .saved-item { background: #fff; padding: 12px 15px; margin-bottom: 8px; border-radius: 5px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-        .saved-item a { text-decoration: none; color: #333; font-size: 0.9em; flex: 1; }
-        .saved-item a:hover { color: var(--accent-color); }
-        .delete-btn { background: #95a5a6; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; font-size: 0.75em; margin-left: 10px; }
+        body { background-color: #f3f4f6; font-family: 'Pretendard', sans-serif; }
+        .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
     </style>
 </head>
-<body>
-
-<h1>📺 법률, 저작권, 소송, 판결, 분쟁 실시간 리스트</h1>
-<p id="update-time" style="font-size: 0.8em; color: #666;"></p>
-
-<div class="container">
-    <div id="news-list">데이터를 불러오는 중...</div>
-
-    <button id="save-btn" onclick="saveToMyList()">📌 선택한 기사 저장하기</button>
-
-    <div id="my-list-section">
-        <div class="list-header">
-            <h3>내 저장 리스트</h3>
-            <button onclick="clearAll()" style="font-size: 0.7em; cursor: pointer;">전체 삭제</button>
+<body class="py-10 px-4 md:px-20">
+    <div class="max-w-6xl mx-auto">
+        <!-- 헤더 섹션 -->
+        <div class="flex flex-col md:flex-row justify-between items-center mb-12 gap-4">
+            <div>
+                <h1 class="text-4xl font-extrabold text-gray-900 tracking-tight">저작권 동향 <span class="text-blue-600 italic">Report</span></h1>
+                <p class="text-gray-500 mt-2">최신 저작권 판례 및 소송 소식을 자동으로 수집합니다.</p>
+            </div>
+            <button onclick="scrapeNews()" id="updateBtn" class="bg-gray-900 hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-bold transition-all shadow-lg active:scale-95">
+                새 소식 가져오기
+            </button>
         </div>
-        <div id="saved-items-container"></div>
+
+        <!-- 뉴스 카드 컨테이너 -->
+        <div id="news-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {% for news in news_list %}
+            <div id="card-{{ news.id }}" class="group bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+                <div class="p-6 flex-grow">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">Copyright News</span>
+                        <!-- 삭제 버튼 -->
+                        <button onclick="deleteNews('{{ news.id }}')" class="text-gray-300 hover:text-red-500 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <a href="{{ news.link }}" target="_blank" class="block">
+                        <h2 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors leading-snug line-clamp-2">
+                            {{ news.title }}
+                        </h2>
+                    </a>
+                    <p class="text-gray-500 text-sm leading-relaxed line-clamp-3">
+                        {{ news.description }}
+                    </p>
+                </div>
+                
+                <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 flex justify-between items-center rounded-b-xl">
+                    <span class="text-xs text-gray-400 font-medium">{{ news.pubDate }}</span>
+                    {% if news.similar_count > 0 %}
+                    <span class="text-[10px] bg-orange-100 text-orange-600 px-2 py-1 rounded-full font-bold">유사 {{ news.similar_count }}건</span>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
     </div>
-</div>
 
-<script>
-    let newsData = [];
-
-    window.onload = function() {
-        loadNews();
-        loadSavedList();
-    };
-
-    function loadNews() {
-        // 캐시 방지를 위해 타임스탬프 추가
-        fetch('news_data.json?v=' + new Date().getTime())
-            .then(response => response.json())
-            .then(data => {
-                newsData = data;
-                displayNews(data);
-                document.getElementById('update-time').innerText = `마지막 업데이트: ${new Date().toLocaleString()}`;
-            })
-            .catch(err => {
-                console.error(err);
-                document.getElementById('news-list').innerText = '데이터를 불러올 수 없습니다. news_data.json 파일이 있는지 확인하세요.';
-            });
-    }
-
-    function displayNews(items) {
-        const container = document.getElementById('news-list');
-        container.innerHTML = '';
-        
-        if (items.length === 0) {
-            container.innerHTML = '<p style="text-align:center; padding: 50px;">수집된 뉴스가 없습니다.</p>';
-            return;
+    <script>
+        async function scrapeNews() {
+            const btn = document.getElementById('updateBtn');
+            btn.disabled = true;
+            btn.innerText = "데이터 수집 중...";
+            
+            const res = await fetch('/scrape');
+            if (res.ok) window.location.reload();
         }
 
-        items.forEach((item, index) => {
-            const div = document.createElement('div');
-            div.className = 'news-item';
+        async function deleteNews(newsId) {
+            if (!confirm("이 뉴스를 리스트에서 삭제할까요?")) return;
             
-            // 유사 기사가 있는지 확인하는 로직 (Python 스크립트에서 생성한 데이터 활용)
-            const similarTag = item.similar_count > 0 
-                ? `<div class="similar-news">🔗 유사하거나 비슷한 뉴스 (${item.similar_count}개)</div>` 
-                : '';
-
-            div.innerHTML = `
-                <div class="checkbox-container">
-                    <input type="checkbox" class="news-check" data-index="${index}" onchange="toggleSaveBtn()">
-                </div>
-                <div class="news-content">
-                    <a href="${item.link}" target="_blank" class="news-title">${item.title}</a>
-                    <div class="news-desc">${item.description}</div>
-                    <div class="news-meta">날짜: ${item.pubDate}</div>
-                    ${similarTag}
-                </div>
-            `;
-            container.appendChild(div);
-        });
-    }
-
-    function toggleSaveBtn() {
-        const checkedCount = document.querySelectorAll('.news-check:checked').length;
-        document.getElementById('save-btn').style.display = checkedCount > 0 ? 'block' : 'none';
-    }
-
-    function saveToMyList() {
-        const checkedBoxes = document.querySelectorAll('.news-check:checked');
-        let currentSaved = JSON.parse(localStorage.getItem('myNewsList')) || [];
-
-        checkedBoxes.forEach(box => {
-            const index = box.dataset.index;
-            const item = newsData[index];
-            
-            if (!currentSaved.some(saved => saved.link === item.link)) {
-                currentSaved.push({
-                    title: item.title,
-                    link: item.link,
-                    date: item.pubDate
-                });
+            const res = await fetch(`/delete/${newsId}`, { method: 'POST' });
+            if (res.ok) {
+                const card = document.getElementById(`card-${newsId}`);
+                card.classList.add('opacity-0', 'scale-95');
+                setTimeout(() => card.remove(), 300);
             }
-            box.checked = false;
-        });
-
-        localStorage.setItem('myNewsList', JSON.stringify(currentSaved));
-        loadSavedList();
-        toggleSaveBtn();
-        alert('내 리스트에 저장되었습니다!');
-    }
-
-    function loadSavedList() {
-        const savedContainer = document.getElementById('saved-items-container');
-        const currentSaved = JSON.parse(localStorage.getItem('myNewsList')) || [];
-        
-        if (currentSaved.length === 0) {
-            savedContainer.innerHTML = '<p class="empty-msg" style="color:#95a5a6; text-align:center;">저장된 기사가 없습니다.</p>';
-            return;
         }
-
-        savedContainer.innerHTML = '';
-        currentSaved.forEach((item, idx) => {
-            const savedDiv = document.createElement('div');
-            savedDiv.className = 'saved-item';
-            savedDiv.innerHTML = `
-                <a href="${item.link}" target="_blank"><strong>[${item.date}]</strong> ${item.title}</a>
-                <button class="delete-btn" onclick="deleteItem(${idx})">삭제</button>
-            `;
-            savedContainer.appendChild(savedDiv);
-        });
-    }
-
-    function deleteItem(idx) {
-        let currentSaved = JSON.parse(localStorage.getItem('myNewsList')) || [];
-        currentSaved.splice(idx, 1);
-        localStorage.setItem('myNewsList', JSON.stringify(currentSaved));
-        loadSavedList();
-    }
-
-    function clearAll() {
-        if(confirm('전체 리스트를 삭제하시겠습니까?')) {
-            localStorage.removeItem('myNewsList');
-            loadSavedList();
-        }
-    }
-</script>
-
+    </script>
 </body>
 </html>
