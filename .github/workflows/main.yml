@@ -20,7 +20,10 @@ jobs:
 
       - name: 필요한 라이브러리 설치
         run: |
-          pip install requests
+        python -m pip install --upgrade pip
+        pip install beautifulsoup4 requests
+
+          
 
       - name: 뉴스 수집 스크립트 실행 (koreacopylight.py)
         env:
