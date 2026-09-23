@@ -1,23 +1,253 @@
 [
     {
-        "title": "아이들 우기, 中 4개 도시 팬콘 개최…'올해의 여성' 영향력 입증",
-        "description": "우기(YUQI))' 피처링으로 QQ뮤직 신곡 차트 1위를 차지했으며, 한국음악저작권협회 외국인 여성 아이돌 최초 정회원 승격, 텐센트 뮤직 '올해의 여성' 선정 등 프로듀서이자 솔로 아티스트로서 입지를 공고히... ",
-        "link": "http://www.stoo.com/article.php?aid=109001815605",
-        "pubDate": "Tue, 22 Sep 2026 10:50:00 +0900",
+        "title": "동명대 게임그래픽학과, 산업체와 함께 AI 시대 교육과정 개편 방향 논...",
+        "description": "AI 저작물의 검증과 저작권·윤리 문제도 함께 다룬다. 교육과정 개편안이 마련되면 산업체 관계자가 참여하는 산학협력협의회를 다시 개최해 현장 적합성을 검토하고, 의견을 반영해 교과목과 비교과 프로그램을 보완할... ",
+        "link": "https://n.news.naver.com/mnews/article/082/0001399662?sid=102",
+        "pubDate": "Wed, 23 Sep 2026 10:50:00 +0900",
+        "similar_count": 0,
+        "content_check": "검토불필요",
+        "is_copyright_topic": true,
+        "keyword_mentions": null
+    },
+    {
+        "title": "티빙, 제로 트러스트 보안 강화...\"접속부터 권한까지 상시 검증\"",
+        "description": "앱 서명키와 디지털저작권관리(DRM) 키를 교체하고 로그인과 세션 검증 구조를 강화했다. 비밀번호 저장 방식도 bcrypt 기반 알고리즘으로 전환했다. 개발·업무 환경에 대한 보안도 강화했다. 소스코드에 포함될 수 있는... ",
+        "link": "https://n.news.naver.com/mnews/article/092/0002438616?sid=105",
+        "pubDate": "Wed, 23 Sep 2026 10:40:00 +0900",
+        "similar_count": 5,
+        "content_check": "검토불필요",
+        "is_copyright_topic": true,
+        "keyword_mentions": null
+    },
+    {
+        "title": "티빙, 보안체계 손질한다…‘제로 트러스트’ 구축 나서",
+        "description": "애플리케이션(앱) 서명키와 디지털저작권관리(DRM) 키를 전면 교체하고 비밀번호 저장 방식을 바꾸는 등 고객 정보 보호를 위한 보안 조치도 강화했다. 23일 티빙은 철저한 접근 검증과 최소 권한, 침해 가정, 지속 검증의... ",
+        "link": "https://n.news.naver.com/mnews/article/009/0005739378?sid=103",
+        "pubDate": "Wed, 23 Sep 2026 10:34:00 +0900",
+        "similar_count": 0,
+        "content_check": "검토불필요",
+        "is_copyright_topic": true,
+        "keyword_mentions": null
+    },
+    {
+        "title": "[기고] IBC 2026 참관기…뉴스 제작 자동화의 현재",
+        "description": "자동 태깅이나 그래픽 생성 결과를 누가 승인했는지, 잘못된 인물 인식과 저작권 문제가 생겼을 때 원본과 수정 이력을 추적할 수 있어야 한다. 넷째, AI 등 소프트웨어 구독료, GPU, 전문 서비스와 교육, 장애 시... ",
+        "link": "http://journal.kobeta.com/?post_type=post&p=63962",
+        "pubDate": "Wed, 23 Sep 2026 10:14:00 +0900",
+        "similar_count": 0,
+        "content_check": "검토불필요",
+        "is_copyright_topic": true,
+        "keyword_mentions": null
+    },
+    {
+        "title": "한국저작권위원회, \"당신의 창작물을 기증해주세요\" 저작권 기증 공모전",
+        "description": "한국저작권위원회, \"당신의 창작물을 기증해주세요\" 저작권 기증 공모전 한국저작권위원회가 시민들이 직접 만든 사진과 영상, 음원 등 창작물을 기증받는 '저작권 기증 공모전'을 진행한다. 한국저작권위원회는... ",
+        "link": "http://www.dandinews.com/news/articleView.html?idxno=17604",
+        "pubDate": "Wed, 23 Sep 2026 10:12:00 +0900",
+        "similar_count": 5,
+        "content_check": "검토불필요",
+        "is_copyright_topic": true,
+        "keyword_mentions": null
+    },
+    {
+        "title": "최유희 시의원, 서빙고초와 의회 체험…민주적 문제해결 과정 경험",
+        "description": "상담·치료, 저작권 보호, 청소년 사교육 등 생활과 밀접한 5개 주제를 조례안으로 제안했다. 각 안건에는 안전교육 강화, 장애인 이용 편의 지원, 상담·치료 확대, 저작권 인식 제고, 과도한 사교육 부담 완화 등 구체적인... ",
+        "link": "https://www.newspim.com/news/view/20260923000321",
+        "pubDate": "Wed, 23 Sep 2026 10:05:00 +0900",
+        "similar_count": 2,
+        "content_check": "검토불필요",
+        "is_copyright_topic": true,
+        "keyword_mentions": null
+    },
+    {
+        "title": "[기고] 검색에서 실행으로: AI 에이전트 시대, 방송 콘텐츠의 발견 전략",
+        "description": "AI 요약이 원문 소비를 흡수함에 따라 데이터 이용 대가와 저작권을 둘러싼 라이선싱 협상이 본격화되었으나, 개별 사업자가 거대 AI 플랫폼과 대등한 협상력을 갖기는 구조적으로 어렵다. 나아가 환각... ",
+        "link": "http://journal.kobeta.com/?post_type=post&p=63957",
+        "pubDate": "Wed, 23 Sep 2026 10:02:00 +0900",
+        "similar_count": 0,
+        "content_check": "검토불필요",
+        "is_copyright_topic": true,
+        "keyword_mentions": null
+    },
+    {
+        "title": "[사설] AI 음악 신탁 토론회, 이제는 실효성 있는 입법과 실행의 시간이...",
+        "description": "지난 8월, 한국음악저작권협회(음저협)가 발표했던 신탁 등록 규정이 문화체육관광부의 폭넓은 공론화 권고에 따라 유보된 이후, 국회 차원에서 처음으로 다양한 이해관계자의 목소리를 모으는 공론화의 장이... ",
+        "link": "https://m.entertain.naver.com/article/410/0001141000",
+        "pubDate": "Wed, 23 Sep 2026 09:28:00 +0900",
+        "similar_count": 0,
+        "content_check": "검토불필요",
+        "is_copyright_topic": true,
+        "keyword_mentions": null
+    },
+    {
+        "title": "“내 목소리 동의 없이 쓰나”…AI 음악 계약에 아티스트 반발",
+        "description": "저작권 침해를 이유로 AI 음악 기업을 상대로 소송을 제기했던 대형 음반사들이 잇따라 이들과 손을 잡고 있다. 새로운 수익원이 될 것이라는 기대와 달리 아티스트들은 자신의 목소리와 연주가 동의 없이 AI에 활용될 수... ",
+        "link": "https://www.koreadaily.com/article/20260922162234047",
+        "pubDate": "Wed, 23 Sep 2026 08:24:00 +0900",
+        "similar_count": 0,
+        "content_check": "검토불필요",
+        "is_copyright_topic": true,
+        "keyword_mentions": null
+    },
+    {
+        "title": "해외 IP 분쟁 증가…'유럽 · 미국의 특허실무' 국제심포지엄 개최",
+        "description": "침해소송, 상표, 디자인, 계약, 저작권법 등 광범위한 영역에 걸쳐 있다. ◇Oblon, McClelland, Maier &amp; Neustadt, L.L.P.=미국 최고의 IP 펌 중 한 곳으로, 출원, 자문, IP 거래, 소송, 사후 승인 절차에서의 대리... ",
+        "link": "http://www.legaltimes.co.kr/news/articleView.html?idxno=96150",
+        "pubDate": "Wed, 23 Sep 2026 08:20:00 +0900",
+        "similar_count": 0,
+        "content_check": "검토불필요",
+        "is_copyright_topic": true,
+        "keyword_mentions": null
+    },
+    {
+        "title": "AI 시대의 마케팅·용역 계약, 지금 당장 점검해야 할 두 가지 [가온 프...",
+        "description": "도용 분쟁이다. 2023년 할리우드를 118일간 멈춰 세웠던 미국 배우·방송인 노조(SAG-AFTRA) 총파업의 도화선 역시... 외주사의 AI 활용으로 저작권이나 퍼블리시티권 침해 문제가 생기면, 외주사가 책임을 지고 발주사를... ",
+        "link": "https://n.news.naver.com/mnews/article/009/0005739289?sid=102",
+        "pubDate": "Wed, 23 Sep 2026 07:01:00 +0900",
+        "similar_count": 0,
+        "content_check": "검토불필요",
+        "is_copyright_topic": true,
+        "keyword_mentions": null
+    },
+    {
+        "title": "[노명우의 알고리즘 밖에서] 희귀자본이 된 인간의 글",
+        "description": "앤스로픽이 수백만 권의 실물 종이책을 구매한 뒤 외주 업체를 통해 책등을 잘라내고 고속 스캔 장비에 넣어 디지털화한 후 원본을 파괴해 AI 데이터 학습에 사용했다는 사실이 저작권 침해 소송 과정에서 알려졌다.... ",
+        "link": "https://n.news.naver.com/mnews/article/081/0003682871?sid=110",
+        "pubDate": "Wed, 23 Sep 2026 05:01:00 +0900",
+        "similar_count": 0,
+        "content_check": "검토불필요",
+        "is_copyright_topic": true,
+        "keyword_mentions": null
+    },
+    {
+        "title": "[기획취재] 잇따르는 저작권 분쟁…제도 보완 시급",
+        "description": "기획고소 악용 우려에도 저작권 여부 확인은 '막막' 온라인을 중심으로 저작권 분쟁이 잇따르면서 저작권 보호와 이용자 책임의 경계를 둘러싼 논란도 커지고 있다. 수십 년 된 사진의 권리관계를 확인하지 못해... ",
+        "link": "https://n.news.naver.com/mnews/article/654/0000202200?sid=102",
+        "pubDate": "Wed, 23 Sep 2026 00:07:00 +0900",
+        "similar_count": 0,
+        "content_check": "검토불필요",
+        "is_copyright_topic": true,
+        "keyword_mentions": null
+    },
+    {
+        "title": "\"개별 대응서 집단 안전망으로\"…뮤지컬 배우·창작자 협회 출범",
+        "description": "불평등 계약이나 저작권 침해, 대금 지급 지연 등 문제가 발생하더라도 창작자가 제작사나 기획사를 상대로 대응하기는 현실적으로 어려웠다. 협회는 창작자들의 저작권·2차적 저작물 활용권 등 권리 관계를 명확히 하고... ",
+        "link": "https://www.newdaily.co.kr/site/data/html/2026/09/22/2026092200338.html",
+        "pubDate": "Tue, 22 Sep 2026 21:22:00 +0900",
+        "similar_count": 0,
+        "content_check": "검토불필요",
+        "is_copyright_topic": true,
+        "keyword_mentions": null
+    },
+    {
+        "title": "음악판 들어온 AI… 일감은 줄이고 비용은 늘리고 [음악 차트 삼킨 AI②...",
+        "description": "해외에서는 기존 음악의 AI 무단 학습을 둘러싼 저작권 소송이 이어지는 가운데, 분쟁을 합의로 끝내고 음악 이용 대가를 지급하는 라이선스 계약도 늘고 있다. AI로 줄어드는 제작비와 새로 발생하는 저작권 비용을... ",
+        "link": "https://it.chosun.com/news/articleView.html?idxno=2023092170719",
+        "pubDate": "Tue, 22 Sep 2026 18:24:00 +0900",
+        "similar_count": 0,
+        "content_check": "검토불필요",
+        "is_copyright_topic": true,
+        "keyword_mentions": null
+    },
+    {
+        "title": "AI 음악 저작권 인정하려면…\"AI 얼마나 썼는지 제작 기록 시스템 마련...",
+        "description": "/사진= 심현리 기자인공지능(AI) 음악에도 저작권을 인정할 것인가를 놓고 세계 각국의 고민이 깊어지고... 김 회장은 \"이 기준은 저작물을 등록할 때 표절했거나 제3자의 권리를 침해하지 않는다는 것을 본인이 보증하고... ",
+        "link": "https://news.mtn.co.kr/news-detail/2026092215554461216",
+        "pubDate": "Tue, 22 Sep 2026 17:44:00 +0900",
         "similar_count": 1,
         "content_check": "검토불필요",
         "is_copyright_topic": true,
         "keyword_mentions": null
     },
     {
-        "title": "세종, 'AIDC 인프라센터' 출범…AI·반도체·데이터센터 통합 대응 [로펌...",
-        "description": "학습데이터·저작권 및 국가핵심기술 등 IP·기술보호 △국내외 투자와 프로젝트금융·인수금융·리파이낸싱 △펀드 및 GPU 파이낸싱 등이다. 센터장은 장경수 변호사(사법연수원 32기)와 유정열 고문이 공동으로 맡는다.... ",
-        "link": "https://n.news.naver.com/mnews/article/014/0005579529?sid=102",
-        "pubDate": "Tue, 22 Sep 2026 10:48:00 +0900",
-        "similar_count": 5,
+        "title": "일타강사 문제집에 강의 영상까지…수능 앞두고 ‘불법 입시 PDF방’ 다...",
+        "description": "2023년 7월 개설된 이 채널은 한때 이용자가 33만 명에 달했지만 2025년 8월 운영자가 문화체육관광부 저작권범... 전문가들은 운영자 단속에 그치지 않고 플랫폼의 관리 책임과 이용자에 대한 경고를 함께 강화할 필요가... ",
+        "link": "https://ilyo.co.kr/?ac=article_view&entry_id=512861",
+        "pubDate": "Tue, 22 Sep 2026 17:36:00 +0900",
+        "similar_count": 0,
         "content_check": "검토불필요",
         "is_copyright_topic": true,
         "keyword_mentions": null
+    },
+    {
+        "title": "대법관 자리는 203일째 비어 있다, 두 권력은 헌법 조문을 들고 마주 섰...",
+        "description": "보복소송 금지 입법에 나서라고도 했다. 한편 정의당 청소년위원회는 민주당의 청소년 전용 스마트폰... 인용한 글 등의 저작권은 각 매체와 작성자에게 있습니다. 제목을 누르면 원문으로 이동합니다. 다른 세계를... ",
+        "link": "https://newscham.net/articles/117226",
+        "pubDate": "Tue, 22 Sep 2026 17:26:00 +0900",
+        "similar_count": 0,
+        "content_check": "검토불필요",
+        "is_copyright_topic": true,
+        "keyword_mentions": null
+    },
+    {
+        "title": "\"내 BL소설 표절했다\" 3100만 원 소송…재판부 \"장르적 코드는 아이디어...",
+        "description": "속해 저작권법의 보호 대상이 되기 어렵다고 판단했다. 결과적으로 재판부는 일부 유사점만으로 두 소설 사이에 실질적 유사성이 있다고 단정하기 어렵다며 B씨의 손해배상 책임을 인정하지 않았다. 소송비용 역시... ",
+        "link": "https://lawtalknews.co.kr/article/UY0YC9POM1AD",
+        "pubDate": "Tue, 22 Sep 2026 16:10:00 +0900",
+        "similar_count": 0,
+        "content_check": "검토불필요",
+        "is_copyright_topic": true,
+        "keyword_mentions": null
+    },
+    {
+        "title": "경콘진, 스타트업·창작자 IP·저작권 지원 확대",
+        "description": "실제 게임 관련 판례를 토대로 저작권 침해 판단 기준과 표준계약서상 권리 귀속 문제를 다뤘다. 지식재산권 보호 범위와 투자 유치 과정에서 IP가 갖는 실무적 가치도 소개했다. 8월에는 IP 역량 강화 프로그램에 참여한... ",
+        "link": "https://n.news.naver.com/mnews/article/092/0002438498?sid=103",
+        "pubDate": "Tue, 22 Sep 2026 15:38:00 +0900",
+        "similar_count": 2,
+        "content_check": "검토불필요",
+        "is_copyright_topic": true,
+        "keyword_mentions": null
+    },
+    {
+        "title": "BTS '스윔'까지 테무서 불법 판매 논란…서경덕 \"이제는 그만해야 한다...",
+        "description": "판매 공간을 제공한다는 이유만으로 저작권·초상권 침해 상품에 대한 관리 책임까지 피할 수 있느냐는 문제다. 판매자 개인의 위법 행위와 함께 플랫폼의 상품 관리와 대응 체계도 살펴봐야 한다는 것이다. 정당한... ",
+        "link": "https://www.the-today.com/news/articleView.html?idxno=90602",
+        "pubDate": "Tue, 22 Sep 2026 14:52:00 +0900",
+        "similar_count": 1,
+        "content_check": "검토불필요",
+        "is_copyright_topic": true,
+        "keyword_mentions": null
+    },
+    {
+        "title": "취약점 6만6000건 시대…‘한국형 방어 AI’ 뜬다",
+        "description": "북한 등 한국을 겨냥한 지능형지속위협(APT)은 물론 HWP·HWPX 문서, 망분리, 국산 디지털저작권관리(DRM) 등은... 모든 분야에서 GPT나 클로드 같은 글로벌 프론티어 모델과 경쟁하기보다 취약점 분석과 코드 검증, 침해사... ",
+        "link": "https://n.news.naver.com/mnews/article/018/0006374359?sid=105",
+        "pubDate": "Tue, 22 Sep 2026 14:18:00 +0900",
+        "similar_count": 0,
+        "content_check": "검토불필요",
+        "is_copyright_topic": true,
+        "keyword_mentions": null
+    },
+    {
+        "title": "\"AI로 AI 공격 막아야\"…KISA, '한국형 보안 AI' 만든다",
+        "description": "국제침해사고대응협의체(FIRST)는 올해 공개되는 공통 보안 취약점 코드(CVE)가 약 6만6000건에 이를 것으로... 한국은 HWP·HWPX 문서와 망 분리, 디지털저작권관리(DRM), 국내 전자금융 보안 모듈 등 고유한 정보기술(IT)... ",
+        "link": "https://n.news.naver.com/mnews/article/015/0005335148?sid=105",
+        "pubDate": "Tue, 22 Sep 2026 14:01:00 +0900",
+        "similar_count": 0,
+        "content_check": "검토불필요",
+        "is_copyright_topic": true,
+        "keyword_mentions": null
+    },
+    {
+        "title": "[신간] 상속마스터 …분쟁 없이, 세금 적게, 제대로 물려주는 법",
+        "description": "가족 사이에서 흔하게 발생할 수 있는 문제와 분쟁 그리고 기업승계, 가상자산, 해외재산, 유튜브 채널과 저작권 등 새로운 형태의 재산까지 폭넓게 다룬다. 상속은 단순지 ‘재산을 받는 일’이 아니다. 누구에게 무엇을... ",
+        "link": "https://www.ajunews.com/view/20260922134028945",
+        "pubDate": "Tue, 22 Sep 2026 13:58:00 +0900",
+        "similar_count": 0,
+        "content_check": "검토불필요",
+        "is_copyright_topic": true,
+        "keyword_mentions": null
+    },
+    {
+        "title": "추석 틈탄 금융범죄·사기 주의…집중단속 6개월간 2만 6782명 검거",
+        "description": "경찰이 민생침해 금융범죄·사이버사기에 대해 6개월 간 집중 단속한 결과 6만 1482건, 2만 6782명을... 2024.7.16 사진=저작권자(c) 연합뉴스, 무단 전재-재배포 금지) ◆ '악성사기 추적팀' 6개월간 2318명 검거 경찰청은... ",
+        "link": "https://www.korea.kr/news/policyNewsView.do?newsId=148972404&call_from=naver_news",
+        "pubDate": "Tue, 22 Sep 2026 13:54:00 +0900",
+        "similar_count": 0,
+        "content_check": "본문수집실패",
+        "is_copyright_topic": null,
+        "keyword_mentions": 0
     },
     {
         "title": "언론 통제부터 개선문까지…트럼프, '국가안보' 만능키로 활용",
@@ -30,100 +260,10 @@
         "keyword_mentions": null
     },
     {
-        "title": "경기콘텐츠진흥원, AI·게임·IP 기업·창작자 저작권 지원",
-        "description": "교육생 저작권 교육 사진 / 경콘진 제공 경기콘텐츠진흥원이 AI·게임·IP·디자인 분야 지원사업과 연계해 기업과 창작자를 대상으로 저작권 특강과 법률상담을 진행했다. 경콘진은 지난 6월부터 9월까지 4개월간 주요... ",
-        "link": "http://www.metroseoul.co.kr/article/20260922500126",
-        "pubDate": "Tue, 22 Sep 2026 10:40:00 +0900",
-        "similar_count": 2,
-        "content_check": "검토불필요",
-        "is_copyright_topic": true,
-        "keyword_mentions": null
-    },
-    {
-        "title": "김미숙 경기도의원, 경기도의회 ‘인공지능 의정지원’ 제도적 기반 마...",
-        "description": "김 의원은 AI 활용 과정에서 발생할 수 있는 부정확한 정보와 개인정보 유출, 저작권 등의 위험을 관리하면서 안전하고 책임 있게 활용할 수 있는 기준을 마련해야... ",
-        "link": "http://www.breaknews.com/1238439",
-        "pubDate": "Tue, 22 Sep 2026 10:36:00 +0900",
-        "similar_count": 1,
-        "content_check": "검토불필요",
-        "is_copyright_topic": true,
-        "keyword_mentions": null
-    },
-    {
-        "title": "아이피아의 '팝테일' 부스, '2026 부천국제만화축제' 동안 약 3천 명 방문...",
-        "description": "독점 IP 확보 전략, 오프라인 접점 확대로 이어져 아이피아는 저작권을 확보한 이미지 데이터셋을 기반으로 멀티모달 AI 기술을 고도화하며, 텍스트 서사에 AI 이미지를 결합한 '웹툰소설' 포맷을 완성해왔다. 이와 함께... ",
-        "link": "https://gamefocus.co.kr/detail.php?number=179319",
-        "pubDate": "Tue, 22 Sep 2026 10:20:00 +0900",
-        "similar_count": 0,
-        "content_check": "검토불필요",
-        "is_copyright_topic": true,
-        "keyword_mentions": null
-    },
-    {
-        "title": "웅지세무대, 전공지식과 AI 활용 역량 겸비한 인재 양성",
-        "description": "‘AI윤리와리스크관리’ 교과목에서는 AI의 편향과 오류를 비롯해 개인정보 보호, 보안, 저작권 등의 문제를... 생성형 AI의 업무 활용 범위가 넓어지면서 잘못된 정보 생성이나 개인정보 침해, 보안 및 저작권 문제 등을... ",
-        "link": "https://dhnews.co.kr/news/view/1065575687376274",
-        "pubDate": "Tue, 22 Sep 2026 10:18:00 +0900",
-        "similar_count": 0,
-        "content_check": "검토불필요",
-        "is_copyright_topic": true,
-        "keyword_mentions": null
-    },
-    {
-        "title": "\"내 캐릭터·IP 권리 지킨다\"…경콘진, 저작권·법률 밀착 지원",
-        "description": "경콘진은 지난 6월부터 9월까지 4개월간 AI·게임·IP·디자인 분야의 주요 지원 사업과 연계해 저작권 특강 및 전문 맞춤 상담 프로그램을 운영했다. 이는 지난해 10월 경콘진과 한국저작권위원회가 체결한 업무협약의... ",
-        "link": "https://n.news.naver.com/mnews/article/008/0005417176?sid=102",
-        "pubDate": "Tue, 22 Sep 2026 10:15:00 +0900",
-        "similar_count": 0,
-        "content_check": "검토불필요",
-        "is_copyright_topic": true,
-        "keyword_mentions": null
-    },
-    {
-        "title": "임오경 \"해외 불법 K-콘텐츠 4억9000만 건...불법유통량 감소 여부로 평...",
-        "description": "불법유통 사이트 역시 크게 늘면서 기존 해외 저작권 보호체계의 실효성을 점검해야 한다는 지적이다. 국회 문화체육관광위원회 임오경 국회의원(더불어민주당·광명갑)이 한국저작권보호원으로부터... ",
-        "link": "https://www.pointdaily.co.kr/news/articleView.html?idxno=320178",
-        "pubDate": "Tue, 22 Sep 2026 10:10:00 +0900",
-        "similar_count": 2,
-        "content_check": "검토불필요",
-        "is_copyright_topic": true,
-        "keyword_mentions": null
-    },
-    {
-        "title": "네이버TV→클립 옮겨도 저작권 보호 계속…\"내년 2분기 관리메뉴 신설\"",
-        "description": "네이버가 오는 30일 네이버TV 서비스를 종료하고 콘텐츠를 클립으로 이전하는 과정에서도 기존 저작권 보호 기능을 이어간다. 네이버TV와 클립에서 제공해 온 저작권 보호 체계를 유지하면서 관리 창구를 단계적으로... ",
-        "link": "https://n.news.naver.com/mnews/article/138/0002242314?sid=105",
-        "pubDate": "Tue, 22 Sep 2026 09:42:00 +0900",
-        "similar_count": 0,
-        "content_check": "검토불필요",
-        "is_copyright_topic": true,
-        "keyword_mentions": null
-    },
-    {
-        "title": "해외 한류콘텐츠 불법유통량 4억 1,410만 → 4억 9,355만 건, 1년 새 19.2%...",
-        "description": "22일 국회 문화체육관광위원회 임오경 국회의원(더불어민주당·광명갑)이 한국저작권보호원으로부터... 임오경 의원은 이 같은 수치는 저작권 보호 활동의 성과를 모니터링이나 삭제 요청 등 대응 건수만으로... ",
-        "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=489435",
-        "pubDate": "Tue, 22 Sep 2026 09:40:00 +0900",
-        "similar_count": 1,
-        "content_check": "검토불필요",
-        "is_copyright_topic": true,
-        "keyword_mentions": null
-    },
-    {
-        "title": "음저협의 우왕좌왕 22일… 결국 국회로 넘어간 AI 음악 기준",
-        "description": "한국음악저작권협회 제공 국회와 정부, 음악계가 22일 AI 활용 음악의 신탁 기준을 새로 마련하기 위해... 이 토론회는 국내 최대 음악저작권 신탁관리단체인 한국음악저작권협회(음저협)가 정작 기준을 제대로 세우지... ",
-        "link": "https://www.greened.kr/news/articleView.html?idxno=350611",
-        "pubDate": "Tue, 22 Sep 2026 09:22:00 +0900",
-        "similar_count": 0,
-        "content_check": "검토불필요",
-        "is_copyright_topic": true,
-        "keyword_mentions": null
-    },
-    {
-        "title": "박영사, '인공지능과 국가의 설계' 출간…AI 시대 법·행정체계 방향 제...",
-        "description": "이어 자유의지와 권리 주체성, 자율주행 인공지능의 판단과 윤리적 충돌, 프라이버시와 국가에 의한 대규모 통제 가능성, 알고리즘 편향, 인공지능에 대한 과신과 의인화, 노동권 위기, 저작권 침해 등 인공지능의 한계와... ",
-        "link": "https://www.gokorea.kr/news/articleView.html?idxno=879283",
-        "pubDate": "Tue, 22 Sep 2026 08:50:00 +0900",
+        "title": "해외 불법 K-콘텐츠 5억 건 육박…1년 새 8천만 건 늘어",
+        "description": "않거나 운영 주체를 확인하기 어려운 사이트에 대해서도 호스팅 사업자 등을 통한 새로운 삭제 요청 경로를 마련했으며, 해외 저작권 바우처를 통해 모니터링·삭제부터 현지 소송까지 지원하고 있다. [폴리뉴스 ]",
+        "link": "https://www.polinews.co.kr/news/articleView.html?idxno=743786",
+        "pubDate": "Tue, 22 Sep 2026 09:57:00 +0900",
         "similar_count": 0,
         "content_check": "검토불필요",
         "is_copyright_topic": true,
@@ -160,16 +300,6 @@
         "keyword_mentions": null
     },
     {
-        "title": "[기고] RAG 시대, 검색할 수 있다고 이용할 권리까지 생기는가",
-        "description": "물론 모든 RAG 이용이 저작권 침해라는 뜻은 아니다. 보호되는 표현의 이용 여부, 계약상 허락, 인용·공정이용의 성립 가능성에 따라 판단은 달라진다. 다만 \"검색 서비스일 뿐\"이라는 설명만으로 이러한 검토를 생략할... ",
-        "link": "https://www.newspim.com/news/view/20260918000957",
-        "pubDate": "Tue, 22 Sep 2026 07:00:00 +0900",
-        "similar_count": 0,
-        "content_check": "검토불필요",
-        "is_copyright_topic": true,
-        "keyword_mentions": null
-    },
-    {
         "title": "음란물 5만건 유포는 유죄, 불법촬영물 41건은 무죄?…왜 이런 판결 나왔...",
         "description": "저작권이 있는 국내 드라마 등 19만여 건을 무단으로 게시한 혐의도 더해졌다. 법원은 음란물 5만여 건을... \"토렌트 파일은 영상 아니다\" 항소 A씨는 1심 판결에 불복해 항소했다. 그는 \"영상물 원본이 아니라 토렌트... ",
         "link": "https://lawtalknews.co.kr/article/G40CE45RFGXL",
@@ -200,41 +330,11 @@
         "keyword_mentions": null
     },
     {
-        "title": "저작권위원회 \"창작은 자유롭게, 저작권은 안전하게\" 공모전 개최",
-        "description": "특히 이번 공모전은 위원회가 발간한 「생성형 인공지능 저작권 분쟁 예방 안내서」를 참고해 인공지능을 활용한 창작 과정에서 유의해야 할 사항을 직접 적용해 볼 수 있도록 했다. 참가자는 특정 저작물이나... ",
-        "link": "http://www.dandinews.com/news/articleView.html?idxno=17583",
-        "pubDate": "Mon, 21 Sep 2026 19:00:00 +0900",
-        "similar_count": 4,
-        "content_check": "검토불필요",
-        "is_copyright_topic": true,
-        "keyword_mentions": null
-    },
-    {
-        "title": "2026 한국 EINS 국제무용대회, 10월 5일 개최…AI 무용 창작까지 경연 확...",
-        "description": "저작권 등 제3자의 권리를 침해하지 않아야 하며, 인종·종교·성별·정치적 입장·국적·성적 지향 등에 대한 차별이나 공격적 표현이 포함된 작품은 참가 자격이 취소될 수 있다. 심사는 무용과 무용 영상 부문으로... ",
-        "link": "https://www.news2day.co.kr/article/20260921500271",
-        "pubDate": "Mon, 21 Sep 2026 17:46:00 +0900",
-        "similar_count": 0,
-        "content_check": "검토불필요",
-        "is_copyright_topic": true,
-        "keyword_mentions": null
-    },
-    {
         "title": "오픈AI, GPT 학습에 불법복제 책 사용…직원들 \"출처 수상하다\"",
         "description": "생성형 AI 학습에 저작권 자료를 사용한 것이 공정 이용에 해당하는지를 둘러싼 소송은 다른 작가들과 교과서 저자들 사이에서도 이어지고 있다. 앤트로픽은 지난해 자사 AI 훈련에 불법복제 작품이 사용됐다고 주장한... ",
         "link": "https://n.news.naver.com/mnews/article/003/0014205815?sid=104",
         "pubDate": "Mon, 21 Sep 2026 17:22:00 +0900",
-        "similar_count": 5,
-        "content_check": "검토불필요",
-        "is_copyright_topic": true,
-        "keyword_mentions": null
-    },
-    {
-        "title": "[AI 세이프가드] ① “AI 통제권 확보할 마지막 '골든타임'…안전장치 서...",
-        "description": "전 이사장은 현재 AI 기술에서 빈번하게 나타나는 위험을 △편향성 △오류·안전성 △악용·오용 △개인정보·저작권 침해 △보안·해킹 △자율무기(킬러로봇) △일자리 문제 등 7가지로 분류했다. 여기에 더해 새로운 AI... ",
-        "link": "https://n.news.naver.com/mnews/article/030/0003469011?sid=105",
-        "pubDate": "Mon, 21 Sep 2026 17:01:00 +0900",
-        "similar_count": 0,
+        "similar_count": 1,
         "content_check": "검토불필요",
         "is_copyright_topic": true,
         "keyword_mentions": null
@@ -244,7 +344,7 @@
         "description": "전속계약, 저작권·퍼블리시티권, 투자·배급 계약, 공정거래 및 경영권 분쟁 등 다각도의 법적 리스크가 급증한다는 게 법무법인(유)린의 설명이다. 이런 상황에서, 법무법인(유)린은 △경영권 분쟁 △M&amp;A(인수 합병)... ",
         "link": "https://n.news.naver.com/mnews/article/079/0004191697?sid=103",
         "pubDate": "Mon, 21 Sep 2026 16:35:00 +0900",
-        "similar_count": 1,
+        "similar_count": 0,
         "content_check": "검토불필요",
         "is_copyright_topic": true,
         "keyword_mentions": null
@@ -264,16 +364,6 @@
         "description": "위메이드와 킹넷은 미르 IP 사용과 로열티 지급 등을 놓고 장기간 법적 분쟁을 벌여오다가 올해 관련 소송과 중재 절차를 마무리했다. 킹넷은 중국에서 미르 계열 게임을 주요 사업으로 하고 있고, 위메이드는 미르 IP의... ",
         "link": "https://n.news.naver.com/mnews/article/015/0005334697?sid=105",
         "pubDate": "Mon, 21 Sep 2026 16:13:00 +0900",
-        "similar_count": 0,
-        "content_check": "검토불필요",
-        "is_copyright_topic": true,
-        "keyword_mentions": null
-    },
-    {
-        "title": "AI 시대 목회 어떻게…교단 총회, 미래 사역 밑그림",
-        "description": "AI가 설교와 교육, 행정 등 목회 전반에 활용되는 상황에서 저작권 침해와 개인정보 유출, 목회적 책임 약화 등의 문제를 고려해 신학적·윤리적 기준을 세우겠다는 것이다. '기장 AI 정책과 교육을 위한 토론회'를 열고... ",
-        "link": "https://www.goodnews1.com/news/articleView.html?idxno=464387",
-        "pubDate": "Mon, 21 Sep 2026 15:16:00 +0900",
         "similar_count": 0,
         "content_check": "검토불필요",
         "is_copyright_topic": true,
@@ -351,13 +441,13 @@
     },
     {
         "title": "[주간AI노트] “인류 역사상 최대 규모 절도”…오픈AI ‘기사 1000만건...",
-        "description": "현지 시간 17일 AFP통신은 공개된 법원 문서에 오픈AI가 챗GPT 개발을 위해 뉴욕타임스 등 여러 언론사들은 오픈AI와 마이크로소프트(MS)를 상대로 기사를 무단 사용한 것에 대한 저작권 침해 소송과 관련해 이를... ",
+        "description": "달하는 저작권이 있는 기사를 챗GPT 개발을 위해 무단으로 사용했다는 주장이 제기됐습니다. 현지 시간... 오픈AI와 MS는 약식 재판(즉각적인 승소 판결)을 법원에 신청했으며 담당 판사가 이를 승인하면 이번 소송은... ",
         "link": "https://www.inthenews.co.kr/news/article.html?no=92110",
         "pubDate": "Sun, 20 Sep 2026 10:06:00 +0900",
         "similar_count": 0,
-        "content_check": "본문검토완료",
+        "content_check": "검토불필요",
         "is_copyright_topic": true,
-        "keyword_mentions": 6
+        "keyword_mentions": null
     },
     {
         "title": "'9월 넷째 주' 덕후를 위한 전국 서브컬처 행사…1회 신촌 코스어 페스...",
@@ -371,7 +461,7 @@
     },
     {
         "title": "[TGS 2026] 게이머에서 개발자, 개발자에서 대표로…아이언메이스 최주...",
-        "description": "양측은 저작권 침해, 영업비밀 침해 여부 등을 놓고 민·형사 소송을 진행해왔다. 최 대표의 게임과의 인연은 어릴 적부터 시작됐다. 부모에게 게임기를 사달라고 했지만 대신 컴퓨터를 받았다. 처음 접한 게임 가운데... ",
+        "description": "양측은 저작권 침해, 영업비밀 침해 여부 등을 놓고 민·형사 소송을 진행해왔다. 최 대표의 게임과의 인연은... 최 대표는 민사 판결에 대해 \"사법부 판단을 존중한다\"고 말했다. 영업비밀 침해 판단과 관련해서는 자신의... ",
         "link": "https://n.news.naver.com/mnews/article/138/0002242072?sid=105",
         "pubDate": "Sat, 19 Sep 2026 18:21:00 +0900",
         "similar_count": 0,
@@ -380,40 +470,10 @@
         "keyword_mentions": null
     },
     {
-        "title": "디즈니, 사상 첫 CTO 선임…'저작권 마찰' 캐릭터닷AI CEO 영입",
-        "description": "자사의 저작권 보유 캐릭터들을 무단으로 호스팅해 지적재산권을 침해했다며 공식 경고장을 발송한 바 있다. 당시에는 관련 캐릭터들을 즉시 삭제하며 사태가 마무리됐다. 이처럼 과거 IP 침해 분쟁을 벌였던 회사의... ",
-        "link": "https://www.aitimes.com/news/articleView.html?idxno=215487",
-        "pubDate": "Sat, 19 Sep 2026 11:40:00 +0900",
-        "similar_count": 1,
-        "content_check": "검토불필요",
-        "is_copyright_topic": true,
-        "keyword_mentions": null
-    },
-    {
-        "title": "오픈AI·마이크로소프트 내부 문건 공개… '웹 해치면서 AI 키운다'",
-        "description": "내부에서는 저작권 침해를 줄이려면 '암기 방지'가 중요하다고 적으면서도 GPT-4가 많은 데이터를 암기해 그대로 되뇌는 데 '엄청나게 뛰어날 것'이라고 인정했다. 소송 자료에는 챗GPT가 뉴욕타임스와 머큐리 뉴스, 덴버... ",
-        "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=701860",
-        "pubDate": "Sat, 19 Sep 2026 07:20:00 +0900",
-        "similar_count": 1,
-        "content_check": "검토불필요",
-        "is_copyright_topic": true,
-        "keyword_mentions": null
-    },
-    {
-        "title": "Global Briefing",
-        "description": "본사(SEC)와 미국법인(SEA)이 어떤 행위를 했는지 특정하지 않아 문제가 있다고도 했다. 리파는 앞서 5월 8일 저작권·상표권·퍼블리시티권 침해 등을 주장하며 소송을 냈다. 이에 대한 심리는 12월 14일로 예정돼 있다.",
-        "link": "https://www.lawtimes.co.kr/news/articleView.html?idxno=226589",
-        "pubDate": "Sat, 19 Sep 2026 05:02:00 +0900",
-        "similar_count": 0,
-        "content_check": "검토불필요",
-        "is_copyright_topic": true,
-        "keyword_mentions": null
-    },
-    {
-        "title": "[로펌 iN] 린, K-콘텐츠 급성장에 전문팀 발족",
-        "description": "도현수 팀장은 \"엔터테인먼트와 콘텐츠 분야의 비즈니스가 빠르게 확장되고 있으나, 이를 뒷받침하는 법적 · 제도적 환경의 한계로 인해 전속계약, 저작권 · 퍼블리시티권, 투자 · 배급 계약, 공정거래 및 경영권 분쟁... ",
-        "link": "http://www.legaltimes.co.kr/news/articleView.html?idxno=96091",
-        "pubDate": "Fri, 18 Sep 2026 19:20:00 +0900",
+        "title": "AI 학습 ‘노동력 착취’ 우려…마이크로소프트 문건 공개",
+        "description": "오픈AI는 공개 데이터를 활용한 AI 모델 훈련이 미국 저작권법상 ‘공정 이용’에 해당한다고 반박하고 있다. 오픈AI는 9월 4일 제출한 요약판결 신청서에서 모델이 뉴스의 사실과 정보를 자체 표현으로 설명하며 원문... ",
+        "link": "https://www.tokenpost.kr/news/ai/410375",
+        "pubDate": "Fri, 18 Sep 2026 22:00:00 +0900",
         "similar_count": 0,
         "content_check": "검토불필요",
         "is_copyright_topic": true,
@@ -431,7 +491,7 @@
     },
     {
         "title": "前 피프티 3인, '130억 손배소' 3년 만에 드디어…11월 1심 선고",
-        "description": "이번 분쟁은 2023년 2월 발표된 '큐피드'가 미국 빌보드 메인 싱글 차트 '핫 100' 17위에 오르며 글로벌 성과를... 반면 '큐피드' 저작권 소송에서는 더기버스 측이 승소해 판결이 확정됐다. 3년여를 끌어온 130억 원대 핵심... ",
+        "description": "반면 '큐피드' 저작권 소송에서는 더기버스 측이 승소해 판결이 확정됐다. 3년여를 끌어온 130억 원대 핵심 본안 소송의 첫 판결에 업계의 관심이 쏠린다. / 사진= 어블룸 공식 계정",
         "link": "https://m.entertain.naver.com/article/213/0001401665",
         "pubDate": "Fri, 18 Sep 2026 15:30:00 +0900",
         "similar_count": 0,
@@ -460,50 +520,10 @@
         "keyword_mentions": null
     },
     {
-        "title": "MS 내부서 AI 학습 비판…\"인류 역사상 가장 큰 노동의 도둑질\"",
-        "description": "NYT 저작권 소송 과정서 제출된 법률 서면 통해 발언 드러나 MS \"개인 견해일 뿐…회사 입장 대변하지 않아... 약식판결을 내려달라고 요청하고 있다. 원고 측을 대리하는 스티븐 리버먼 변호사는 \"이번에 처음 공개된... ",
-        "link": "https://www.ajunews.com/view/20260918131153614",
-        "pubDate": "Fri, 18 Sep 2026 13:36:00 +0900",
-        "similar_count": 0,
-        "content_check": "검토불필요",
-        "is_copyright_topic": true,
-        "keyword_mentions": null
-    },
-    {
-        "title": "[박동선의 머니&amp;엔터] 작품당 '150억 베팅판' K팝…음악 IP 가치평가 왜...",
-        "description": "7년 전속계약 기간의 만료 및 재계약 불확실성, 분쟁이나 이탈 리스크는 물론, 연차가 쌓일수록 커지는... 작사·작곡·편곡의 저작권, 실연권, 음반제작자 권리가 쪼개져 있는 데다 유통사 선급금 계약과 해외... ",
-        "link": "https://www.nc.press/news/articleView.html?idxno=626820",
-        "pubDate": "Fri, 18 Sep 2026 13:23:00 +0900",
-        "similar_count": 0,
-        "content_check": "검토불필요",
-        "is_copyright_topic": true,
-        "keyword_mentions": null
-    },
-    {
-        "title": "필립스, ‘불법해킹’ 바이오넷 대표에 105억 승소",
-        "description": "한편 재판부는 필립스 노스아메리카 등 해외법인 2곳이 피고를 상대로 제기한 ‘저작권 침해 손해배상’ 청구와 관련해서는 “피고가 원고들에 각각 1억9781만원씩을 지급해야 한다”고 원고 일부 승소로 판결했다.... ",
-        "link": "https://www.naeil.com/news/read/602816?ref=naver",
-        "pubDate": "Fri, 18 Sep 2026 13:04:00 +0900",
-        "similar_count": 0,
-        "content_check": "검토불필요",
-        "is_copyright_topic": true,
-        "keyword_mentions": null
-    },
-    {
-        "title": "[법무법인 비트TIP]저작재산권을 양도한 후에도 공표권은 문제될까?미공...",
-        "description": "한국저작권위원회 위원장을 역임한 오승종 변호사가 함께하는 법무법인 비트 TIP팀은 저작권법에 대한 깊이 있는 이해를 바탕으로, 콘텐츠의 기획과 제작부터 이용·유통 및 분쟁에 이르기까지 저작권과 관련하여... ",
-        "link": "https://platum.kr/archives/294857",
-        "pubDate": "Fri, 18 Sep 2026 12:20:00 +0900",
-        "similar_count": 0,
-        "content_check": "검토불필요",
-        "is_copyright_topic": true,
-        "keyword_mentions": null
-    },
-    {
-        "title": "\"제 사진인데요?\" 웨딩사진 얼굴만 AI로 '쓱'…교묘해진 저작권 도둑질",
-        "description": "17일 한국저작권위원회에 따르면 저작권 분쟁조정 접수건수는 2022년 103건에서 2023년 110건, 2024년 120건, 지난해 175건으로 3년 새 69.9% 증가했다. 저작권 상담은 2022년 17만6171건, 2023년 14만2355건, 2024년 14만5997건, 지난해... ",
-        "link": "https://n.news.naver.com/mnews/article/277/0005818390?sid=102",
-        "pubDate": "Fri, 18 Sep 2026 11:00:00 +0900",
+        "title": "\"오픈AI, 언론 기사 1000만건 이상 무단 이용\"...법원 문서 공개",
+        "description": "오픈AI와 마이크로소프트(MS)는 뉴스 콘텐츠 활용이 저작권법상 허용되는 '공정 이용'에 해당한다고 맞서고... 오픈AI와 MS는 현재 법원에 약식판결을 신청한 상태다. 법원이 이를 받아들이면 배심원단이 참여하는 정식... ",
+        "link": "https://www.joongangenews.com/news/articleView.html?idxno=549250",
+        "pubDate": "Fri, 18 Sep 2026 14:04:00 +0900",
         "similar_count": 0,
         "content_check": "검토불필요",
         "is_copyright_topic": true,
@@ -538,6 +558,16 @@
         "content_check": "검토불필요",
         "is_copyright_topic": true,
         "keyword_mentions": null
+    },
+    {
+        "title": "정부, 추석 연휴 24시간 안전관리 총력…교통·화재·치안 대응 강화",
+        "description": "(사진=저작권자(c) 연합뉴스, 무단 전재-재배포 금지) ◆ 범정부 24시간 상황관리…취약분야 사전점검 등 먼저... 민생범죄 단속을 강화한다. 특히 1인 가구 밀집지역의 순찰을 확대한다. 해양경찰청은 선박·양식장 침입 등... ",
+        "link": "https://www.korea.kr/news/policyNewsView.do?newsId=148972015&call_from=naver_news",
+        "pubDate": "Wed, 16 Sep 2026 17:35:00 +0900",
+        "similar_count": 0,
+        "content_check": "본문수집실패",
+        "is_copyright_topic": null,
+        "keyword_mentions": 0
     },
     {
         "title": "저작권 침해 신고 2만건 넘었는데…민원 신고 수사의뢰 '0건'",
@@ -590,16 +620,6 @@
         "keyword_mentions": null
     },
     {
-        "title": "BTS ‘스윔’ 싱글까지…중국 온라인몰서 불법 판매 논란",
-        "description": "또다시 저작권 침해 논란이 불거졌다. K-팝 스타들의 초상과 상표를 활용한 불법 상품 문제가 반복되는... 장기간 반복될 경우 아티스트와 콘텐츠의 브랜드 이미지에도 악영향을 줄 수 있어 해외 플랫폼의 적극적인 단속과... ",
-        "link": "https://m.entertain.naver.com/article/396/0000755380",
-        "pubDate": "Tue, 15 Sep 2026 09:09:00 +0900",
-        "similar_count": 0,
-        "content_check": "검토불필요",
-        "is_copyright_topic": true,
-        "keyword_mentions": null
-    },
-    {
         "title": "YTN을 통째로 팔라는 뜻은 대통령실에서 왔다",
         "description": "강제단속 중단과 체류권, 여성이주노동자 성차별 · 성폭력 근절, 인종차별 철폐와 차별금지법 제정이다.... 인용한 글 등의 저작권은 각 매체와 작성자에게 있습니다. 제목을 누르면 원문으로 이동합니다. 다른 세계를... ",
         "link": "https://newscham.net/articles/117190",
@@ -618,6 +638,16 @@
         "content_check": "검토불필요",
         "is_copyright_topic": true,
         "keyword_mentions": null
+    },
+    {
+        "title": "어린이 보호구역 사고 다발 93곳 점검…위험요인 508건 개선",
+        "description": "고원식 횡단보도를 설치하고 불법 주정차 단속도 강화한다. 서울시내 한 초등학교 앞 어린이보호구역. 2026.8.27 (사진=저작권자(c) 연합뉴스, 무단 전재-재배포 금지) 행안부는 개선사항을 관계기관과 지방정부에... ",
+        "link": "https://www.korea.kr/news/policyNewsView.do?newsId=148971831&call_from=naver_news",
+        "pubDate": "Mon, 14 Sep 2026 14:37:00 +0900",
+        "similar_count": 0,
+        "content_check": "본문수집실패",
+        "is_copyright_topic": null,
+        "keyword_mentions": 0
     },
     {
         "title": "수업자료 버젓이 사고팔고… “불법 알지만 나만 없으면 손해” [녹취·...",
@@ -675,16 +705,6 @@
         "link": "http://www.ktnews.com/news/articleView.html?idxno=148433",
         "pubDate": "Wed, 09 Sep 2026 17:14:00 +0900",
         "similar_count": 0,
-        "content_check": "검토불필요",
-        "is_copyright_topic": true,
-        "keyword_mentions": null
-    },
-    {
-        "title": "한-프랑스 지식재산 협력 확대… ‘AI 특허심사부터 위조상품 단속까지...",
-        "description": "위조상품 단속까지 협력 범위를 넓힌다. 김용선 지식재산처장은 8일(현지시간) 프랑스 파리 엘리제궁에서... 양 기관은 포흐 청장이 내달 세계지식재산기구(WIPO) 저작권·창의산업 부문 사무차장으로 부임한 후 WIPO와... ",
-        "link": "https://www.kukinews.com/article/view/kuk202609090151",
-        "pubDate": "Wed, 09 Sep 2026 14:56:00 +0900",
-        "similar_count": 1,
         "content_check": "검토불필요",
         "is_copyright_topic": true,
         "keyword_mentions": null
