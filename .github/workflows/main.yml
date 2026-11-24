@@ -14,9 +14,9 @@ jobs:
         uses: actions/checkout@v5
 
       - name: 파이썬 설치
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
-          python-version: '3.9'
+          python-version: '3.12'
 
       - name: 필요한 라이브러리 설치
         run: |
